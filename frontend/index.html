@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Extractor Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Extractor <span>Pro</span></h1>
+            <p>Automated Real-Time Data Extraction Prototype</p>
+        </header>
+
+        <main>
+            <section class="controls card">
+                <div class="input-group">
+                    <label for="interval">Iteration Time (Minutes)</label>
+                    <input type="number" id="interval" value="1" min="0.5" step="0.5">
+                </div>
+                <div class="button-group">
+                    <button id="startBtn" class="btn btn-primary">Start Extraction</button>
+                    <button id="stopBtn" class="btn btn-secondary" disabled>Stop Extraction</button>
+                </div>
+            </section>
+
+            <section class="status-panel card">
+                <div class="status-header">
+                    <h2>Live Status</h2>
+                    <div id="statusBadge" class="badge idle">Idle</div>
+                </div>
+                
+                <div class="status-content">
+                    <div class="status-item">
+                        <span class="label">Latest Extracted Time:</span>
+                        <span id="extractedTime" class="value">--:--:--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Last Updated:</span>
+                        <span id="lastUpdated" class="value">Never</span>
+                    </div>
+                    <div class="status-item message-box">
+                        <span class="label">System Message:</span>
+                        <p id="statusMessage">Awaiting user input...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Time Extractor Testing Version</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
